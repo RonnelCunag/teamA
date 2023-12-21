@@ -4,12 +4,30 @@ function RegisterForm({ onForgotPassword }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log('Registering in with:', { email, password });
-  };
 
+    try {
+        const response = await fetch('http://localhost:8080/user/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+  
+        if (response.ok) {
+          // Registration successful, you can redirect or perform other actions
+          console.log('Registration successful');
+        } else {
+          // Registration failed, handle errors
+          console.error('Registration failed');
+        }
+      } catch (error) {
+        console.error('Error during registration:', error);
+      }
+    };
+    // Add your login logic here
   return (
     <form onSubmit={handleRegister} className="login-form">
     <h2>Sign up an account.</h2>

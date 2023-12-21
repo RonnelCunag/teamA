@@ -1,15 +1,11 @@
 import React from 'react';
-import RegisterForm from './RegisterForm';
-import '../Auth.css';
+import LoginForm from './ForgotForm';
+import '..';
 
-function Register({ onNavigateHome }) {
-  const handleRegister = () => {
-    alert('Register button clicked');
-    // You can add register logic here
-  };
+function Login({ onNavigateHome, onForgotPassword }) {
 
   return (
-    <div>
+    <div className="auth-container">
       <div className="auth-header">
         <img src="/assets/images/companyLogo.png" alt="Logo" className="logo" />
       </div>
@@ -20,17 +16,16 @@ function Register({ onNavigateHome }) {
       </div>
       <div className="label-container">
         <div className="auth-label">
-          <h1>SIGN UP</h1>
+          <h1>SIGN IN</h1>
         </div>
       </div>
       <div className="auth-content">
         <div className="auth-sign">
-            <RegisterForm/>
+            <LoginForm onForgotPassword={onForgotPassword} />
         </div>
       </div>
     </div>
   );
 }
 
-export default Register;
- 
+export default Login;
