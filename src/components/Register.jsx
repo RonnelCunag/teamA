@@ -1,4 +1,6 @@
 import React from 'react';
+import RegisterForm from './RegisterForm';
+import '../Auth.css';
 
 function Register({ onNavigateHome }) {
   const handleRegister = () => {
@@ -16,9 +18,15 @@ function Register({ onNavigateHome }) {
           <button onClick={onNavigateHome}>Home</button>
         </div>
       </div>
+      <div className="label-container">
+        <div className="auth-label">
+          <h1>SIGN UP</h1>
+        </div>
+      </div>
       <div className="auth-content">
-        <h2>Register</h2>
-        <button onClick={handleRegister}>Register</button>
+        <div className="auth-sign">
+            <RegisterForm/>
+        </div>
       </div>
     </div>
   );

@@ -29,6 +29,11 @@ body {
     text-align: center;
     margin-top: 0px;
   }
+
+  .label-container {
+    display: flex;
+    padding-right:240px;
+  }
   
   .auth-label {
     height: 60px;
@@ -69,8 +74,7 @@ body {
   }
 
   .login-form{
-    max-width: 100%;
-    width: 100%;
+    width: 600px;
     margin: 0 auto;
     background-color: #BCE8B1;
     padding: 20px;
@@ -78,7 +82,7 @@ body {
   }
 
 .login-form input {
-    width: 600px;
+    width: 400px;
     height: 30px;
     padding: 12px;
     margin-bottom: 15px;

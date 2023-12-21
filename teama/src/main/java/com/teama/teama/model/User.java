@@ -16,7 +16,6 @@ public class User {
     private String email;
     private String fullName;
     private String role;
-    private String recoveryPhone;
     private String image;
 
 
@@ -66,14 +65,6 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public String getRecoveryPhone() {
-        return this.recoveryPhone;
-    }
-
-    public void setRecoveryPhone(String recoveryPhone) {
-        this.recoveryPhone = recoveryPhone;
     }
 
     public String getImage() {
