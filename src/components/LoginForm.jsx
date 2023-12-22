@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginForm({ onForgotPassword }) {
   const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ function LoginForm({ onForgotPassword }) {
   };
 
   return (
-    <form onSubmit={handleLogin} className="login-form">
+    <form onSubmit={handleLogin} className="template-form">
     <h2>Sign in on your account.</h2>
     <h2>Be part of the success.</h2>
       <input
@@ -31,10 +32,11 @@ function LoginForm({ onForgotPassword }) {
       <div>
         <h3>By clicking "Sign in," you agree to our Terms of Use and our Privacy Policy.</h3>
       </div>
-      <div className="forgot-password"
-        onClick={onForgotPassword}>
+      <Link to="/forgot">
+        <div className="forgot-password">
           Forgot your password?
-      </div>
+        </div>
+      </Link>
       <button type="submit">Sign in</button>
     </form>
   );

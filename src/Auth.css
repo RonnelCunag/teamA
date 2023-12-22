@@ -73,7 +73,7 @@ body {
     right: 60px;
   }
 
-  .login-form{
+  .template-form{
     width: 600px;
     margin: 0 auto;
     background-color: #BCE8B1;
@@ -81,7 +81,7 @@ body {
     border-radius: 5px;
   }
 
-.login-form input {
+.template-form input {
     width: 400px;
     height: 30px;
     padding: 12px;
@@ -92,22 +92,22 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
 }
 
-.login-form h2 {
+.template-form h2 {
     color: #4D4141;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.login-form h3 {
+.template-form h3 {
     font-size: 12px;
     font-weight: 400px;
     color: #4D4141;
 }
 
-.login-form button {
+.template-form button {
     margin: 20px;
 }
 
-  .login-form .forgot-password {
+  .template-form .forgot-password {
     color: #4D4141;
     font-weight: 700px;
     cursor: pointer;
@@ -115,7 +115,15 @@ body {
     text-decoration: underline;
   }
 
-  .login-form .forgot-password:hover {
+  .template-form .existing-account {
+    color: #4D4141;
+    font-weight: 700px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  .template-form .forgot-password:hover {
     color: #0056b3;
   }
   

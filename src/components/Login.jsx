@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginForm from './LoginForm';
+import { Link } from "react-router-dom";
 import '../Auth.css';
 
 function Login({ onNavigateHome, onForgotPassword }) {
@@ -11,7 +12,9 @@ function Login({ onNavigateHome, onForgotPassword }) {
       </div>
       <div className="auth-navi">
         <div className="home-button">
-          <button onClick={onNavigateHome}>Home</button>
+            <Link to="/">
+                <button>Home</button>
+            </Link> 
         </div>
       </div>
       <div className="label-container">
@@ -21,7 +24,7 @@ function Login({ onNavigateHome, onForgotPassword }) {
       </div>
       <div className="auth-content">
         <div className="auth-sign">
-            <LoginForm onForgotPassword={onForgotPassword} />
+            <LoginForm/>
         </div>
       </div>
     </div>

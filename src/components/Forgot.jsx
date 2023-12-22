@@ -1,8 +1,7 @@
 import React from 'react';
 import LoginForm from './ForgotForm';
-import '..';
 
-function Login({ onNavigateHome, onForgotPassword }) {
+function Forgot({ onNavigateHome, onForgotPassword }) {
 
   return (
     <div className="auth-container">
@@ -28,4 +27,4 @@ function Login({ onNavigateHome, onForgotPassword }) {
   );
 }
 
-export default Login;
+export default Forgot;

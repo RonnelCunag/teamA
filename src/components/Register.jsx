@@ -1,5 +1,6 @@
 import React from 'react';
 import RegisterForm from './RegisterForm';
+import { Link } from "react-router-dom";
 import '../Auth.css';
 
 function Register({ onNavigateHome }) {
@@ -15,7 +16,9 @@ function Register({ onNavigateHome }) {
       </div>
       <div className="auth-navi">
         <div className="home-button">
-          <button onClick={onNavigateHome}>Home</button>
+          <Link to="/">
+            <button>Home</button>
+          </Link> 
         </div>
       </div>
       <div className="label-container">
