@@ -1,133 +1,261 @@
 body {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
+  display: block;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
 
 .auth-container {
-    text-align: center;
-  }
+  text-align: center;
+}
 
 .auth-header {
-    background-color: #BCE8B1;
-    padding: 10px;
-    text-align: center;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-  .logo {
-    width: 170px; 
-    height: auto;
-  }
-  
-  .auth-content {
-    text-align: center;
-    margin-top: 0px;
-  }
+  background-color: #BCE8B1;
+  padding: 10px;
+  text-align: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.logo {
+  width: 170px; 
+  height: auto;
+}
 
-  .label-container {
-    display: flex;
-    padding-right:240px;
-  }
-  
-  .auth-label {
-    height: 60px;
-    width: 400px;
-    border-radius: 5px 5px 0px 0px;
-    background-color: #126912;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.auth-content {
+  text-align: center;
+  margin-top: 0px;
+}
 
-  .auth-navi {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 50px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    color: white;
-    margin: 0;
-  }
-  
-  .auth-content h2 {
-    font-size: 20px;
-  }
-  
-  .auth-label h1 {
-    font-size: 24px;
-    font-weight: 400; 
-    color: #ffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 0;
-  }
+.label-container {
+  display: flex;
+  padding-right:240px;
+}
 
-  .home-button {
-    position: absolute;
-    right: 60px;
-  }
+.auth-label {
+  height: 60px;
+  width: 400px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #126912;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .template-form{
-    width: 600px;
-    margin: 0 auto;
-    background-color: #BCE8B1;
-    padding: 20px;
-    border-radius: 5px;
-  }
+.auth-navi {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 50px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  margin: 0;
+}
+
+.auth-content h2 {
+  font-size: 20px;
+}
+
+.auth-label h1 {
+  font-size: 24px;
+  font-weight: 400; 
+  color: #ffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.home-button {
+  position: absolute;
+  right: 60px;
+}
+
+.template-form{
+  width: 600px;
+  margin: 0 auto;
+  background-color: #BCE8B1;
+  padding: 20px;
+  border-radius: 5px;
+}
 
 .template-form input {
-    width: 400px;
-    height: 30px;
-    padding: 12px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border: 1px solid #ccc; /* Input border color */
-    border-radius: 5px;  
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  width: 400px;
+  height: 30px;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Input border color */
+  border-radius: 5px;  
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
 }
 
 .template-form h2 {
-    color: #4D4141;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #4D4141;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .template-form h3 {
-    font-size: 12px;
-    font-weight: 400px;
-    color: #4D4141;
+  font-size: 12px;
+  font-weight: 400px;
+  color: #4D4141;
 }
 
 .template-form button {
-    margin: 20px;
+  margin: 20px;
 }
 
-  .template-form .forgot-password {
-    color: #4D4141;
-    font-weight: 700px;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: underline;
+.template-form .forgot-password {
+  color: #4D4141;
+  font-weight: 700px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.template-form .existing-account {
+  color: #4D4141;
+  font-weight: 700px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.template-form .forgot-password:hover {
+  color: #0056b3;
+}
+
+div {
+  align-items: center;
+  justify-content: center;
+}
+/* ... existing styles ... */
+
+/* New styles for Forgot.jsx form */
+.forgot-container {
+text-align: center;
+}
+
+.forgot-header {
+background-color: #BCE8B1;
+padding: 10px;
+text-align: center;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+}
+
+.forgot-logo {
+width: 170px;
+height: auto;
+}
+
+.forgot-content {
+text-align: center;
+margin-top: 0px;
+}
+
+.forgot-label {
+height: 60px;
+width: 400px;
+border-radius: 5px 5px 0px 0px;
+background-color: #126912;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.forgot-navi {
+padding-top: 20px;
+padding-bottom: 20px;
+height: 50px;
+justify-content: center;
+text-align: center;
+align-items: center;
+color: white;
+margin: 0;
+}
+
+.forgot-content h2 {
+font-size: 20px;
+}
+
+.forgot-label h1 {
+font-size: 24px;
+font-weight: 400;
+color: #ffff;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: 0;
+}
+
+.forgot-home-button {
+position: absolute;
+right: 60px;
+}
+
+.forgot-form {
+width: 600px;
+margin: 0 auto;
+background-color: #BCE8B1;
+padding: 100px;
+border-radius: 5px;
+}
+
+.forgot-form input {
+width: 400px;
+height: 30px;
+padding: 12px;
+margin-bottom: 15px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.forgot-form h2 {
+color: #4D4141;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.forgot-form h3 {
+font-size: 12px;
+font-weight: 400px;
+color: #4D4141;
+}
+
+.forgot-form button {
+margin: 20px;
+}
+
+.forgot-form .forgot-password {
+color: #4D4141;
+font-weight: 700px;
+cursor: pointer;
+font-size: 14px;
+text-decoration: underline;
+}
+
+.forgot-form .existing-account {
+color: #4D4141;
+font-weight: 700px;
+cursor: pointer;
+font-size: 14px;
+text-decoration: underline;
+}
+
+.forgot-form .forgot-password:hover {
+color: #0056b3;
+}
+
+.forgot-form .existing-account:hover {
+  color: #0056b3;
   }
 
-  .template-form .existing-account {
-    color: #4D4141;
-    font-weight: 700px;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: underline;
-  }
-
-  .template-form .forgot-password:hover {
-    color: #0056b3;
-  }
-  
-  div {
-    align-items: center;
-    justify-content: center;
-  }
+.forgot-div {
+align-items: center;
+justify-content: center;
+}

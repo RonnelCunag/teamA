@@ -1,14 +1,38 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function LoginForm({ onForgotPassword }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
-  const handleLogin = (e) => {
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log('Logging in with:', { email, password });
+    try {
+      const response = await fetch('http://localhost:8080/user/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        // Login successful, redirect to the dashboard or home page
+        console.log('Login successful');
+        navigate('/dashboard'); // Adjust the path based on your application
+      } else {
+        // Login failed, handle errors
+        console.error('Login failed');
+        setError('Invalid email or password. Please try again.'); // Provide a more user-friendly error message
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      setError('An unexpected error occurred. Please try again later.');
+    }
   };
 
   return (
@@ -21,6 +45,7 @@ function LoginForm({ onForgotPassword }) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email Address"
+        required
       />
       <input
         type="password"
@@ -28,6 +53,7 @@ function LoginForm({ onForgotPassword }) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
+        required
       />
       <div>
         <h3>By clicking "Sign in," you agree to our Terms of Use and our Privacy Policy.</h3>

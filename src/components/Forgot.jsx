@@ -1,25 +1,23 @@
 import React from 'react';
 import LoginForm from './ForgotForm';
-
+import { Link } from "react-router-dom";
+import '../Auth.css';
 function Forgot({ onNavigateHome, onForgotPassword }) {
 
   return (
-    <div className="auth-container">
-      <div className="auth-header">
-        <img src="/assets/images/companyLogo.png" alt="Logo" className="logo" />
+    <div className="forgot-container">
+      <div className="forgot-header">
+        <img src="/assets/images/companyLogo.png" alt="Logo" className="forgot-logo" />
       </div>
-      <div className="auth-navi">
+      <div className="forgot-navi">
         <div className="home-button">
-          <button onClick={onNavigateHome}>Home</button>
+            <Link to="/">
+                <button>Home</button>
+            </Link> 
         </div>
       </div>
-      <div className="label-container">
-        <div className="auth-label">
-          <h1>SIGN IN</h1>
-        </div>
-      </div>
-      <div className="auth-content">
-        <div className="auth-sign">
+      <div className="forgot-content">
+        <div className="forgot-sign">
             <LoginForm onForgotPassword={onForgotPassword} />
         </div>
       </div>

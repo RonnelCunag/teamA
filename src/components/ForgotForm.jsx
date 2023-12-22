@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function ForgotForm({ onForgotPassword }) {
   const [email, setEmail] = useState('');
@@ -11,9 +12,9 @@ function ForgotForm({ onForgotPassword }) {
   };
 
   return (
-    <div className="container">
-      <div className="forms-container">
-        <form className="sign-in-form" onSubmit={handleForgot}>
+    <div className="forgot-container">
+      <div className="forgot-container">
+        <form className="forgot-form" onSubmit={handleForgot}>
           <h2 className="title">Forgot Password</h2>
           <p>Please enter your email address to reset your password.</p>
           <div className="input-field">
@@ -27,19 +28,18 @@ function ForgotForm({ onForgotPassword }) {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <input type="submit" className="btn" value="Reset Password" />
+          <button type="submit">Send to Email</button>
+          <Link to="/login">
+            <div className="existing-account">
+              Remember your password?
+            </div>
+          </Link>
         </form>
       </div>
 
-      <div className="panels-container">
-        <div className="panel left-panel">
-          <div className="content">
-            <h3 className="center-text">Remember your password?</h3>
-            <p className="center-text">
-              <a href="index.html" className="back-to-login-link">
-                Back to Login
-              </a>
-            </p>
+      <div className="forgot-container">
+        <div className="forgot left-panel">
+          <div className="forgot-content">
           </div>
         </div>
       </div>
