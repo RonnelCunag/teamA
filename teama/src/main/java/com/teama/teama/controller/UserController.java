@@ -1,6 +1,7 @@
 package com.teama.teama.controller;
 
-import java.util.List;
+import java.util.List; // Add this import statement
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +12,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.teama.teama.model.User;
 import com.teama.teama.repository.UserRepository;
 
 @RestController
-@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -26,12 +25,6 @@ public class UserController {
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    @GetMapping("/register")
-    public String showRegistrationForm(Model model) {
-        model.addAttribute("user", new User());
-        return "register";
-    }
 
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody User user) {
@@ -67,6 +60,16 @@ public class UserController {
     public List<User> showUserList(Model model) {
         List<User> userList = userRepository.findAll();
         model.addAttribute("userList", userList);
-        return userRepository.findAll();
+
+        // Log the size of the user list
+        System.out.println("Number of users: " + userList.size());
+
+        return userList;
+    }
+
+    @PostMapping("/createUsers") // New method to handle POST requests for creating users
+    public ResponseEntity<String> createUser(@RequestBody User user) {
+        userRepository.save(user);
+        return ResponseEntity.status(HttpStatus.CREATED).body("User created successfully");
     }
 }

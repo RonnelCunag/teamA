@@ -2,13 +2,14 @@ package com.teama.teama.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String userName;
@@ -17,7 +18,16 @@ public class User {
     private String fullName;
     private String role;
     private String image;
+    private String VerifyEmailToken;
 
+
+    public String getVerifyEmailToken() {
+        return VerifyEmailToken;
+    }
+
+    public void setVerifyEmailToken(String verityEmailToken) {
+        VerifyEmailToken = verityEmailToken;
+    }
 
     public Long getId() {
         return this.id;
